@@ -3,11 +3,31 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     slidesToShow: 4,
-    speed: 700,
+    speed: 400,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 1500,
     draggable: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
   $(".slider-galerie").slick({
     arrows: false,
@@ -41,15 +61,6 @@ $(document).ready(function () {
     $("body").toggleClass("lock");
   });
 });
-
-// $(function () {
-//   $(".menu-link").click(function (event) {
-//     if ($(".menu-list").hasClass("one")) {
-//       $(".menu-link").not($(this)).removeClass("menu-active");
-//     }
-//     $(this).toggleClass("menu-active");
-//   });
-// });
 
 $(function () {
   let header = $(".header");
